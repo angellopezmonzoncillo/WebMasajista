@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Service &amp; Duration Selection | Massage Therapy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#19e66f",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112118",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .service-card-selected {
+            border-color: #19e66f;
+            box-shadow: 0 0 0 2px rgba(25, 230, 111, 0.2);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0e1b13] dark:text-white min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7f3ec] dark:border-[#1e3a2a] px-10 py-3 bg-white dark:bg-[#112118] sticky top-0 z-50">
+<div class="flex items-center gap-4 text-[#0e1b13] dark:text-white">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-[#0e1b13]">
+<span class="material-symbols-outlined">spa</span>
+</div>
+<h2 class="text-[#0e1b13] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">LuxeRest Therapy</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#0e1b13] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-primary text-sm font-bold leading-normal border-b-2 border-primary" href="#">Services</a>
+<a class="text-[#0e1b13] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">About</a>
+<a class="text-[#0e1b13] dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-[#e7f3ec]" data-alt="User profile avatar smiling person" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBF6HStBxKCOSwxT6nnV1Etr1BFkl_7Z5AsitKcnejzP1kmgeWSnDTqUkrwzRme97k7hVH54F7z1sd9LJ_cBdj3OE2HO-XIKGNE9SVx6gHQzXjeJg27FCy7Zm28J2oJjU_v2tE2_dQ25x67whvWXni_tpgusI5aL24ol1XN813-pj9uKWQR36Xt-ICD8kvzFbrtCQ_OxMBYMxhVi21_yRM2a5uTowK-xBnN7lk9GdgkGAIrbSM8qDjStMwE_IAvGjuh0RzovRSl-GA");'></div>
+</div>
+</header>
+<main class="px-10 lg:px-40 flex flex-1 justify-center py-10">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<!-- Page Header & Instructions -->
+<div class="flex flex-wrap justify-between items-end gap-3 mb-8">
+<div class="flex flex-col gap-2">
+<p class="text-[#0e1b13] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Select Your Treatment</p>
+<p class="text-[#4e976d] dark:text-[#a0c4ae] text-base font-normal leading-normal">Choose the massage style and duration that fits your wellness journey.</p>
+</div>
+</div>
+<!-- Duration Selection Segmented Control -->
+<div class="bg-white dark:bg-[#1a2e22] p-6 rounded-xl shadow-sm border border-[#e7f3ec] dark:border-[#1e3a2a] mb-10">
+<h3 class="text-[#0e1b13] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">schedule</span>
+                            Set Global Duration
+                        </h3>
+<div class="flex h-12 flex-1 items-center justify-center rounded-lg bg-[#e7f3ec] dark:bg-[#122419] p-1.5 max-w-md">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-[#1a2e22] has-[:checked]:shadow-sm has-[:checked]:text-[#0e1b13] dark:has-[:checked]:text-white text-[#4e976d] text-sm font-bold leading-normal transition-all">
+<span class="truncate">30 Minutes</span>
+<input class="invisible w-0" name="duration" type="radio" value="30"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-[#1a2e22] has-[:checked]:shadow-sm has-[:checked]:text-[#0e1b13] dark:has-[:checked]:text-white text-[#4e976d] text-sm font-bold leading-normal transition-all">
+<span class="truncate">60 Minutes</span>
+<input checked="" class="invisible w-0" name="duration" type="radio" value="60"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-[#1a2e22] has-[:checked]:shadow-sm has-[:checked]:text-[#0e1b13] dark:has-[:checked]:text-white text-[#4e976d] text-sm font-bold leading-normal transition-all">
+<span class="truncate">90 Minutes</span>
+<input class="invisible w-0" name="duration" type="radio" value="90"/>
+</label>
+</div>
+</div>
+<!-- Grid Layout: Services + Summary -->
+<div class="flex flex-col lg:flex-row gap-8 items-start">
+<!-- Services Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-[2]">
+<!-- Service Card 1 -->
+<div class="flex flex-col gap-0 bg-white dark:bg-[#1a2e22] rounded-xl overflow-hidden border-2 border-transparent hover:border-primary/50 transition-all cursor-pointer shadow-sm group">
+<div class="w-full h-48 bg-center bg-no-repeat bg-cover relative" data-alt="Relaxing Swedish massage therapy session" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2miFOcBzLF8MMHbybe_Hfq3_xNJBdvrLrD7-TNQyArjEN6IWda78n-RjSWO53_nB1AHV3k5jlaYFEt6mortL5fUobWv-9522PD_qdmu5YuXwNIHqmqt9Dtrd7l45M2kytVcxFb2lAVkqcHG5VpW4VJm-yxU5I5U8kG1taHvVzpuoTdro2YhTK1WJa_VuwTxvMBOBhJ0SvUeDP4zWmo2Jlz7g9KF_mYoJ-wUwMplRhDGIGX5cYcmvYzquHb6jM8mgttHpRaFtLXZU");'>
+<div class="absolute top-3 right-3 bg-primary text-[#0e1b13] text-xs font-bold px-3 py-1 rounded-full">Popular</div>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h4 class="text-[#0e1b13] dark:text-white text-xl font-bold">Swedish Massage</h4>
+<p class="text-primary text-xl font-black">$100.00</p>
+</div>
+<p class="text-[#4e976d] dark:text-[#a0c4ae] text-sm leading-relaxed mb-4">
+                                        Perfect for relaxation and stress relief. Uses long, gliding strokes to improve circulation and soothe the nervous system.
+                                    </p>
+<button class="w-full py-2.5 rounded-lg border-2 border-primary text-primary font-bold text-sm group-hover:bg-primary group-hover:text-[#0e1b13] transition-all flex items-center justify-center gap-2">
+                                        Select Treatment
+                                    </button>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="flex flex-col gap-0 bg-white dark:bg-[#1a2e22] rounded-xl overflow-hidden border-2 border-primary service-card-selected transition-all cursor-pointer shadow-sm group">
+<div class="w-full h-48 bg-center bg-no-repeat bg-cover relative" data-alt="Deep tissue massage technique close up" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqeDb0s0EYi2S90nP1Kfpz1B0hnWTsCxWSdYtep1HEYV1ExcKB_DopIWUU_Yd_vczPpljnDkur9LQEHquhISyGnAUst78cEcDhReOWa2pm76FgLoCFigFuxT1XjaWQ_E8NlSrZ_ULoLcssu4btHbxEAn1GDFIE47zxI2dPAP5cnF8QCr_D7vfLZcqoVog9EvSTlkiJWnUx5mkAHAt_tqOhhHL-B9awqsuP00ktHIaH9SsXr-knD6C_yHmLG0eLTD9t-yJinz5LcUo");'>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h4 class="text-[#0e1b13] dark:text-white text-xl font-bold">Deep Tissue</h4>
+<p class="text-primary text-xl font-black">$120.00</p>
+</div>
+<p class="text-[#4e976d] dark:text-[#a0c4ae] text-sm leading-relaxed mb-4">
+                                        Targets deep muscle layers and connective tissue. Ideal for chronic aches, stiff necks, and shoulder tension.
+                                    </p>
+<button class="w-full py-2.5 rounded-lg bg-primary text-[#0e1b13] font-bold text-sm transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                                        Selected
+                                    </button>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="flex flex-col gap-0 bg-white dark:bg-[#1a2e22] rounded-xl overflow-hidden border-2 border-transparent hover:border-primary/50 transition-all cursor-pointer shadow-sm group">
+<div class="w-full h-48 bg-center bg-no-repeat bg-cover relative" data-alt="Sports massage for athlete recovery" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWVJYqOUBXfD0PkaWSQaDYCvVaFJqVoRPWE1TH2IKC-HAXKR5tcEjwPowPXM958qnIB_oEdxyCBYjIYeCazZVzFsvEnlGA0AJPOcCZP3i3IIA-0DaK_N1oipSuxza-qAuvwAKBlWk_568p0_-a-G2LxQSiWAK4pD2NJwbKH70Ud14nHngZ8mGF05b9hM4Rzdl4457iZayetUlQzrv1GI0w7EJN-IL_4YGTstbWhwYxE4g7148_eIUj6Jk4xGEsRKS0UAAnbd1vUSA");'>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h4 class="text-[#0e1b13] dark:text-white text-xl font-bold">Sports Massage</h4>
+<p class="text-primary text-xl font-black">$115.00</p>
+</div>
+<p class="text-[#4e976d] dark:text-[#a0c4ae] text-sm leading-relaxed mb-4">
+                                        Focuses on muscle groups relevant to your athletic activity. Helps prevent injury and improves flexibility.
+                                    </p>
+<button class="w-full py-2.5 rounded-lg border-2 border-primary text-primary font-bold text-sm group-hover:bg-primary group-hover:text-[#0e1b13] transition-all flex items-center justify-center gap-2">
+                                        Select Treatment
+                                    </button>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="flex flex-col gap-0 bg-white dark:bg-[#1a2e22] rounded-xl overflow-hidden border-2 border-transparent hover:border-primary/50 transition-all cursor-pointer shadow-sm group">
+<div class="w-full h-48 bg-center bg-no-repeat bg-cover relative" data-alt="Aromatherapy massage with essential oils" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKSBXFnHGjhT35c4uMV_dqWV71dIj4TTFYP5D0OP1QdbTxxfwvukQSVzMy7di2BFRORxMneTsC8P23xMaIWKhIAnWrTPNaHf8CNvKlPy-NfSHhpKudrDB2AlFUTGbHDQ4BOZrZaNZE8uDaQb0FlGCDjA5EcFYCjAuRrDXmelei1Y-8QrSSjRs6Rpl7RqHiGvWRXDlKrUgce7xHd9kb3TPq6NA-jEURUFQMM1pGsLJBDNj_uhBUeXdrMeteDDqzthun6sKNxrr1rQE");'>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h4 class="text-[#0e1b13] dark:text-white text-xl font-bold">Aromatherapy</h4>
+<p class="text-primary text-xl font-black">$110.00</p>
+</div>
+<p class="text-[#4e976d] dark:text-[#a0c4ae] text-sm leading-relaxed mb-4">
+                                        Uses premium essential oils to enhance physical and emotional well-being. A total sensory experience.
+                                    </p>
+<button class="w-full py-2.5 rounded-lg border-2 border-primary text-primary font-bold text-sm group-hover:bg-primary group-hover:text-[#0e1b13] transition-all flex items-center justify-center gap-2">
+                                        Select Treatment
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Sidebar Summary (Sticky) -->
+<div class="flex-1 w-full lg:max-w-sm sticky top-24">
+<div class="bg-white dark:bg-[#1a2e22] rounded-xl p-6 shadow-md border border-[#e7f3ec] dark:border-[#1e3a2a]">
+<h3 class="text-[#0e1b13] dark:text-white text-lg font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined">shopping_cart</span>
+                                    Booking Summary
+                                </h3>
+<div class="space-y-4 mb-6">
+<div class="flex justify-between items-start pb-4 border-b border-[#e7f3ec] dark:border-[#1e3a2a]">
+<div>
+<p class="font-bold text-[#0e1b13] dark:text-white">Deep Tissue</p>
+<p class="text-sm text-[#4e976d] dark:text-[#a0c4ae]">60 Minutes Duration</p>
+</div>
+<p class="font-bold text-[#0e1b13] dark:text-white">$120.00</p>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-[#4e976d] dark:text-[#a0c4ae]">Service Fee</span>
+<span class="text-[#0e1b13] dark:text-white">$0.00</span>
+</div>
+<div class="flex justify-between items-center pt-2">
+<span class="text-lg font-bold text-[#0e1b13] dark:text-white">Total</span>
+<span class="text-2xl font-black text-primary">$120.00</span>
+</div>
+</div>
+<div class="bg-primary/10 dark:bg-primary/5 p-4 rounded-lg mb-6 flex items-start gap-3 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-xl">info</span>
+<p class="text-xs text-[#4e976d] dark:text-[#a0c4ae] leading-normal">
+                                        You can cancel or reschedule up to 24 hours before your appointment for free.
+                                    </p>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-[#0e1b13] font-black py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-1">
+                                    Continue to Schedule
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center text-xs text-[#4e976d] dark:text-[#a0c4ae] mt-4">
+                                    Secure booking powered by LuxeRest
+                                </p>
+</div>
+<!-- Professional Guarantee -->
+<div class="mt-6 flex flex-col gap-4 px-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<span class="text-sm font-medium">Licensed Therapists</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">clean_hands</span>
+<span class="text-sm font-medium">Sanitized Environments</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="mt-auto border-t border-[#e7f3ec] dark:border-[#1e3a2a] py-8 px-10 bg-white dark:bg-[#112118]">
+<div class="max-w-[1200px] mx-auto flex flex-wrap justify-between items-center gap-4">
+<p class="text-sm text-[#4e976d] dark:text-[#a0c4ae]">© 2024 LuxeRest Therapy. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-sm text-[#4e976d] dark:text-[#a0c4ae] hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-sm text-[#4e976d] dark:text-[#a0c4ae] hover:text-primary" href="#">Terms of Service</a>
+<a class="text-sm text-[#4e976d] dark:text-[#a0c4ae] hover:text-primary" href="#">Help Center</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

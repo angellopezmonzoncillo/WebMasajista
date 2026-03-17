@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Massage Therapist Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#19e66f",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112118",
+                        "sage": "#4e976d",
+                        "taupe": "#8d8378",
+                        "cream": "#fdfbf7"
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-size: 24px; vertical-align: middle; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0e1b13]">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-sage/10 px-6 lg:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">spa</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-[#0e1b13] dark:text-white">Serenity Wellness</h1>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300" href="#services">Services</a>
+<a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300" href="#about">About Me</a>
+<a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300" href="#benefits">Benefits</a>
+<a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300" href="#contact">Contact</a>
+</nav>
+<button class="bg-primary text-[#0e1b13] px-6 py-2.5 rounded-lg font-bold text-sm hover:opacity-90 transition-all shadow-sm">
+                Book Now
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative px-6 py-12 lg:px-20 lg:py-24">
+<div class="max-w-7xl mx-auto">
+<div class="relative overflow-hidden rounded-xl bg-[#0e1b13]">
+<div class="absolute inset-0 opacity-60">
+<div class="w-full h-full bg-cover bg-center" data-alt="Calm spa environment with massage table and bamboo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrISHVSA4d5EFqk4zGPUhOk2MNUSQZHke7vKcITp4FKeqxbavWmEApLxR0xDIQZDfSo3-5HvQDxxnGlu8u2eIYa_46UEgxpgwzgPFBvKj-Altjrx6CEojO1LZy014kX1fpwNPK92kJbEv-hfuqiQQUDXznAzjfcIXSF41kCry0ouDjmwRz3C_xD_wOtRRH-vAd9GQn9y_sdFbm4UEpp7OJjxz1KIRSFLva33azQsWRCb1ZIW3JHM8wHF-Ba_CE4B99LCYXHC-kdmQ");'></div>
+</div>
+<div class="relative z-10 flex flex-col items-center justify-center text-center px-6 py-24 lg:py-40 max-w-3xl mx-auto">
+<h2 class="text-white text-4xl lg:text-6xl font-black leading-tight mb-6">Find Your Path to Wellness</h2>
+<p class="text-white/90 text-lg lg:text-xl font-normal mb-10 leading-relaxed">Experience professional massage therapy in a tranquil environment designed for your healing and relaxation.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-[#0e1b13] px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform">
+                                Schedule Your Session
+                            </button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all">
+                                View Services
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="px-6 py-16 lg:px-20 bg-cream dark:bg-background-dark/50" id="services">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<span class="text-primary font-bold uppercase tracking-widest text-xs">Professional Care</span>
+<h2 class="text-3xl lg:text-4xl font-bold mt-2 dark:text-white">Our Specialties</h2>
+</div>
+<p class="max-w-md text-sage dark:text-sage/80">Tailored treatments to address your specific needs, from chronic pain management to pure relaxation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-white dark:bg-background-dark p-4 rounded-xl shadow-sm border border-sage/10 hover:shadow-md transition-shadow">
+<div class="aspect-square w-full rounded-lg overflow-hidden mb-5">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-500" data-alt="Therapist performing deep tissue massage on back" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQCeVXVc6NfZcSiCJSOO8MZbdGLXuwYNjuQuxgksUGnOegBx9jsCwLngHGJZ9ROPQlyjU29cXOgpLbq8pYCFiZOUX0qeLtsCnal7ixSumuyNapd5JTkPjpX6NgvojxJpmFj84wrZjPZ_Xj0QSb2dNeph-V2Hl5wEIyfrKADFzjHfDJIeiwId5lneYaJhWhMdUuoudUIVYrb5gHVzKCiLs2uTgWPNW4NmgTfGkDPUI0DoBPLqN9A6kDe6LgB7FkyXaeo_wwVeJEyZo");'></div>
+</div>
+<h3 class="text-xl font-bold mb-2 dark:text-white">Deep Tissue</h3>
+<p class="text-sage text-sm mb-4 leading-relaxed dark:text-sage/90">Focus on realigning deeper layers of muscles and connective tissue to relieve chronic tension.</p>
+<div class="flex items-center justify-between pt-4 border-t border-sage/10">
+<span class="font-bold text-primary">$95 / 60 min</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white dark:bg-background-dark p-4 rounded-xl shadow-sm border border-sage/10 hover:shadow-md transition-shadow">
+<div class="aspect-square w-full rounded-lg overflow-hidden mb-5">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-500" data-alt="Classic Swedish massage with relaxing oils" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPOct2REIH6lwiLK36Id6T20D3FyuxbVDrXDRMZ4HdTrdiuoQpjymNqgTgIpIKeMdIR0MqacV-NYWp7CJ-BzoTM92F9JtyWSGttuewAMfoJYSFH1BpUn-urhRkbrwL-maLtQFi7UulXbX8VVydgJ1tO4Z7KbkdFLDmg0BZYBEFJyxUEFVZC7j7By4RE5N2cK9FiVStGRanBpEbR8QbEC2fJ5XI7Q9O1Ai_mkbYEuMmFXr_ETiWhptWKujIOeemD8q3rn6tFJt9kRQ");'></div>
+</div>
+<h3 class="text-xl font-bold mb-2 dark:text-white">Swedish Massage</h3>
+<p class="text-sage text-sm mb-4 leading-relaxed dark:text-sage/90">A classic relaxation technique using long, gliding strokes to improve circulation and ease stress.</p>
+<div class="flex items-center justify-between pt-4 border-t border-sage/10">
+<span class="font-bold text-primary">$85 / 60 min</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-white dark:bg-background-dark p-4 rounded-xl shadow-sm border border-sage/10 hover:shadow-md transition-shadow">
+<div class="aspect-square w-full rounded-lg overflow-hidden mb-5">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-500" data-alt="Aromatherapy setup with essential oils and stones" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCr3FEJJrlV408nepNpjzRZm5bzwrOjmb1RrvKOP2yAZ9ms5z7T_dbYpCffCqQms-cSDT4f5bsc-_t4eK1JQqthSVQyf7VbfsK1JntAgMEYIwuW-CoMy1a8Oekl9x_gkeIyafZrj338X111HatywaiF6m7Dr9QBaNyOyNLUbIH4w_oMhF6TkxdIu-NlePHLYyY5s8ssJ0D-3_rcQb67yfz0YyIn5d5y54vESk1Qb0BpvVeNgdFKpel_z6jAu5GA4CWX2TOmTzCLmuM");'></div>
+</div>
+<h3 class="text-xl font-bold mb-2 dark:text-white">Aromatherapy</h3>
+<p class="text-sage text-sm mb-4 leading-relaxed dark:text-sage/90">Enhanced with therapeutic-grade essential oils to promote emotional balance and physical healing.</p>
+<div class="flex items-center justify-between pt-4 border-t border-sage/10">
+<span class="font-bold text-primary">$110 / 75 min</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="px-6 py-20 lg:px-20 overflow-hidden" id="about">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+<div class="w-full h-full bg-cover bg-center" data-alt="Portrait of professional massage therapist smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB9x2T-8GcW9yawsla-2B_gieUxhGlr6WYBGhneEcTnenaeWUhaAWYz2fI_NWj7tUpdf9avKWsO2WHnd-ryvvw2jqhk5uruNBaj1tTIJWajHuxPI7IEmAMKo5Vp8cH_Gg2kEm1bIfVZ1DEGvI9fRnH4-g2VxA3TDXmE-bsV3EtkB71V83aC4qHbjw6DkZ5yshc1RC4ylX2PYRa6IBBHT4MMcytw4UGS3nGuZbmRRoCxxvSSLobtdI33kcAwcWyPdPtYNC9LZ7sR57M");'></div>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-primary p-6 rounded-xl shadow-xl hidden md:block">
+<p class="text-3xl font-black">12+</p>
+<p class="text-sm font-bold uppercase tracking-tight">Years Experience</p>
+</div>
+</div>
+<div>
+<span class="text-primary font-bold uppercase tracking-widest text-xs">About Me</span>
+<h2 class="text-3xl lg:text-4xl font-bold mt-2 mb-6 dark:text-white">Meet Your Therapist, Elena</h2>
+<p class="text-lg text-sage dark:text-sage/90 mb-6 leading-relaxed">
+                        With over a decade of practice in holistic health, I believe that bodywork is a vital component of a healthy lifestyle. My approach combines technical knowledge of anatomy with an intuitive touch.
+                    </p>
+<p class="text-sage dark:text-sage/80 mb-8">
+                        I specialize in clinical massage therapy, focusing on injury recovery and chronic pain. I am certified in Neuromuscular Therapy and Myofascial Release, ensuring that every session is tailored to your body's unique story.
+                    </p>
+<div class="grid grid-cols-2 gap-6 mb-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="font-medium dark:text-gray-200">LMT Certified</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="font-medium dark:text-gray-200">NCBTMB Member</span>
+</div>
+</div>
+<button class="border-2 border-primary text-[#0e1b13] dark:text-white px-8 py-3 rounded-lg font-bold hover:bg-primary hover:text-[#0e1b13] transition-all">
+                        Read Full Biography
+                    </button>
+</div>
+</div>
+</section>
+<!-- Benefits Section -->
+<section class="px-6 py-20 lg:px-20 bg-background-light dark:bg-background-dark" id="benefits">
+<div class="max-w-7xl mx-auto text-center mb-16">
+<h2 class="text-3xl lg:text-4xl font-bold mb-4 dark:text-white">Benefits of Regular Massage</h2>
+<p class="text-sage max-w-2xl mx-auto">Investing in your body today prevents complications tomorrow. Discover how therapy can transform your daily life.</p>
+</div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-cream dark:bg-background-dark p-8 rounded-xl border border-sage/10 text-center flex flex-col items-center">
+<div class="w-14 h-14 bg-primary/20 text-primary rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<h3 class="font-bold mb-3 dark:text-white">Stress Reduction</h3>
+<p class="text-sm text-sage dark:text-sage/80">Lowers cortisol levels and promotes a deep sense of relaxation and mental clarity.</p>
+</div>
+<div class="bg-cream dark:bg-background-dark p-8 rounded-xl border border-sage/10 text-center flex flex-col items-center">
+<div class="w-14 h-14 bg-primary/20 text-primary rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">fitness_center</span>
+</div>
+<h3 class="font-bold mb-3 dark:text-white">Pain Relief</h3>
+<p class="text-sm text-sage dark:text-sage/80">Alleviates muscle tension, joint pain, and eases the discomfort of chronic conditions.</p>
+</div>
+<div class="bg-cream dark:bg-background-dark p-8 rounded-xl border border-sage/10 text-center flex flex-col items-center">
+<div class="w-14 h-14 bg-primary/20 text-primary rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">ecg</span>
+</div>
+<h3 class="font-bold mb-3 dark:text-white">Improved Flow</h3>
+<p class="text-sm text-sage dark:text-sage/80">Boosts blood circulation and lymphatic drainage, aiding in faster body recovery.</p>
+</div>
+<div class="bg-cream dark:bg-background-dark p-8 rounded-xl border border-sage/10 text-center flex flex-col items-center">
+<div class="w-14 h-14 bg-primary/20 text-primary rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">bedtime</span>
+</div>
+<h3 class="font-bold mb-3 dark:text-white">Better Sleep</h3>
+<p class="text-sm text-sage dark:text-sage/80">Calms the nervous system, helping you fall asleep faster and achieve deeper rest.</p>
+</div>
+</div>
+</section>
+<!-- Booking CTA Section -->
+<section class="px-6 py-20 lg:px-20">
+<div class="max-w-7xl mx-auto bg-primary rounded-3xl p-8 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-10">
+<div class="max-w-xl text-center lg:text-left">
+<h2 class="text-3xl lg:text-5xl font-black text-[#0e1b13] mb-6 leading-tight">Ready to start your healing journey?</h2>
+<p class="text-[#0e1b13]/80 text-lg">Check real-time availability and book your session in less than 2 minutes.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+<button class="bg-[#0e1b13] text-white px-10 py-5 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+                        Book Your Appointment
+                    </button>
+</div>
+</div>
+</section>
+<!-- Contact & Footer -->
+<footer class="px-6 py-16 lg:px-20 border-t border-sage/10" id="contact">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">spa</span>
+<h1 class="text-xl font-bold tracking-tight dark:text-white">Serenity Wellness</h1>
+</div>
+<p class="text-sage text-sm dark:text-sage/80">Professional massage therapy dedicated to restorative health and mindful wellness in a serene sanctuary.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-sage/20 flex items-center justify-center text-sage hover:bg-primary hover:text-[#0e1b13] transition-all" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-sage/20 flex items-center justify-center text-sage hover:bg-primary hover:text-[#0e1b13] transition-all" href="#">
+<span class="material-symbols-outlined text-lg">camera</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 dark:text-white">Quick Links</h4>
+<ul class="space-y-4 text-sm text-sage dark:text-sage/80">
+<li><a class="hover:text-primary transition-colors" href="#">Gift Certificates</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Client Intake Form</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cancellation Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 dark:text-white">Hours</h4>
+<ul class="space-y-4 text-sm text-sage dark:text-sage/80">
+<li class="flex justify-between"><span>Mon - Fri</span> <span class="font-bold">9:00 - 19:00</span></li>
+<li class="flex justify-between"><span>Saturday</span> <span class="font-bold">10:00 - 16:00</span></li>
+<li class="flex justify-between"><span>Sunday</span> <span class="font-bold text-primary/70">Closed</span></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 dark:text-white">Contact</h4>
+<ul class="space-y-4 text-sm text-sage dark:text-sage/80">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">location_on</span>
+<span>123 Tranquil Way, Wellness Suite 4<br/>San Francisco, CA 94103</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">call</span>
+<span>(555) 123-4567</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">mail</span>
+<span>hello@serenitywellness.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-8 border-t border-sage/10 text-center text-xs text-sage/60 dark:text-sage/40">
+<p>© 2024 Serenity Wellness Massage Therapy. All rights reserved.</p>
+</div>
+</footer>
+</main>
+</body></html>
